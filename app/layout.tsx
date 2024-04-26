@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { Rubik } from 'next/font/google';
+import { Nunito } from 'next/font/google';
+import NavBar from '@/components/NavBar';
 import './globals.css';
 
-const rubik = Rubik({ subsets: ['latin'] });
+const font = Nunito({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Caio Hygino Software',
@@ -16,7 +17,13 @@ const RootLayout = ({
 }>) => {
 	return (
 		<html lang="en">
-			<body className={rubik.className}>{children}</body>
+			<head>
+				<script src="https://kit.fontawesome.com/8042553644.js" crossOrigin="anonymous"></script>
+			</head>
+			<body className={font.className + 'flex flex-col min-h-screen bg-sky-950'}>
+				<NavBar />
+				{children}
+			</body>
 		</html>
 	);
 };

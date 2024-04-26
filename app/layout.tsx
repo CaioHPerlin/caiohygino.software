@@ -18,7 +18,7 @@ const RootLayout = ({
 	return (
 		<html lang="en">
 			<head>
-				<script src="https://kit.fontawesome.com/8042553644.js" crossOrigin="anonymous"></script>
+				<script src="https://kit.fontawesome.com/8042553644.js" crossOrigin="anonymous" async></script>
 			</head>
 			<body className={font.className + 'flex flex-col min-h-screen bg-sky-950'}>
 				<NavBar />
